@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/login_signup_form/style.css') }}">
     <title>Login</title>
 </head>
 <body>
 
     <div class="container">  <!-- Wrapper for form -->
-        <h2 class="word">Login</h2>
+        <h2 class="word">Log in</h2>
         
         <form action="{{ url_for('login') }}" method="post">
             <div>{{ msg }}</div>
@@ -17,7 +17,7 @@
             <input class="textbox" type="text" name="username" placeholder="Enter Username" required>
             <input class="textbox" type="password" name="password" placeholder="Enter Password" required>
             
-            <button class="btn" type="submit">Login</button>
+            <button class="btn" type="submit">Log in</button>
         </form>
 
         <p class="bottom">Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>

@@ -1,0 +1,73 @@
+$primary-color : #64369B;
+$lighter-primary-color : #7F55B1;
+$lightest-primary-color : #9E79CB;
+$darker-primary-color : #4D1E85;
+$text-color : #C6ACE5;
+$secondary-color : #30D5C9;
+$lighter-secondary-color : #55E0D6;
+$text-secondary-color : #85ECE4;
+$container-shadow : 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+@mixin main-text() {
+    font-weight : bold;
+    font-size : 60px;
+}
+
+@mixin flex-center() {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;
+}
+
+@mixin round-padding() {
+    padding : 12px;
+    border : none;
+    border-radius : 10px;
+}
+
+
+@mixin button() {
+    font-weight: bold;
+    color : $primary-color;
+    background-color: $lightest-primary-color;
+    border : none;
+    border-radius : 10px;
+    padding : 10px;
+    font-size : 18px;
+    margin : 10px;
+
+    &:hover {
+        color : $lighter-primary-color;
+        background-color : $text-color;
+    }
+
+    &:active {
+        color : $lighter-primary-color;
+        background-color: $darker-primary-color;
+    }
+}
+
+@mixin link() {
+    text-decoration : underline;
+    color: $text-color;
+    font-weight: bold;
+
+    &:hover {
+        color : white;
+    }
+}
+
+@mixin input-field() {
+    @include round-padding();
+    margin : 10px;
+    width : 75%;
+    font-size : 15px;
+    font-weight: bold;
+    color : $lightest-primary-color;
+
+    &:focus {
+        outline : 3px solid $lightest-primary-color;
+        
+    }
+}

@@ -1,0 +1,42 @@
+@use "../global.scss" as global;
+
+body {
+    @include global.flex-center();
+    font-family: Arial, sans-serif;
+    background-color: global.$lighter-primary-color;
+    color : global.$text-color;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    @include global.flex-center();
+    @include global.round-padding();
+    background-color: global.$primary-color;
+    box-shadow: global.$container-shadow;
+
+    .word {
+        @include global.main-text();
+        margin : 30px;
+    }
+
+    form {
+        @include global.flex-center();
+        width : 100%;
+        padding : 20px;
+
+        .textbox {
+            @include global.input-field();
+        }
+
+        .btn {
+            @include global.button();
+            width : 83%;
+
+        }
+    }
+
+    a {
+        @include global.link();
+    }
+}
