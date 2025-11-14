@@ -1,9 +1,23 @@
+@use "../global.scss" as global;
+
 body {
+    @include global.flex-center();
+    flex-direction: row;
     font-family: Arial, sans-serif;
-    background-color: #9AC0CD;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: global.$lighter-primary-color;
+    color : global.$text-color;
     height: 100vh;
     margin: 0;
+}
+
+.header {
+    @include global.flex-center();
+    @include global.round-padding();
+    background-color: global.$primary-color;
+    box-shadow: global.$container-shadow;
+}
+
+.border {
+    padding : 10px;
+    
 }
